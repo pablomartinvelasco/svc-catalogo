@@ -1,0 +1,5 @@
+# Binarios y artefactos locales
+/app
+/svc-catalogo
+/site/
+*.out

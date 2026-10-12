@@ -1,0 +1,28 @@
+# Entidad del catálogo de Backstage (RF-01). El portal la lee de este repositorio.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: svc-catalogo
+  title: Catálogo de productos
+  description: API REST de solo lectura con el catálogo de productos de la tienda de demostración.
+  tags:
+    - go
+    - rest
+    - ejemplo
+  annotations:
+    github.com/project-slug: pablomartinvelasco/svc-catalogo
+    backstage.io/techdocs-ref: dir:.
+    # Los recursos de Kubernetes llevan la etiqueta backstage.io/kubernetes-id con este valor.
+    backstage.io/kubernetes-id: svc-catalogo
+  links:
+    - url: http://svc-catalogo.dev.localtest.me
+      title: Entorno dev
+    - url: http://svc-catalogo.staging.localtest.me
+      title: Entorno staging
+    - url: https://github.com/pablomartinvelasco/idp-tfg/tree/main/gitops/apps/svc-catalogo
+      title: Configuración de despliegue (GitOps)
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/equipo-catalogo
+  system: tienda-demo
